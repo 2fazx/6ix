@@ -1,0 +1,24 @@
+:root {
+  /* Deep black/purple background */
+  --bg-base: #060508;
+  --bg-panel: #0e0b14;
+  --bg-raised: #171222;
+  --bg-hover: #201a2e;
+  
+  /* Silver/Purple borders */
+  --border: #2a2238;
+  --border-strong: #44385c;
+  
+  /* Bright white/silver text */
+  --fg: #f4f4f5;
+  --fg-muted: #a1a1aa;
+  --fg-dim: #716b7a;
+
+  --dur-fast: 120ms;
+  --dur-med: 200ms;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

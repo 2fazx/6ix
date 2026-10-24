@@ -1,0 +1,65 @@
+@import './tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: 
+    radial-gradient(ellipse at 15% 0%, rgba(88, 28, 135, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 100%, rgba(88, 28, 135, 0.1) 0%, transparent 50%),
+    var(--bg-base);
+  background-color: var(--bg-base);
+  color: var(--fg);
+  font-family: 'Outfit', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+::selection {
+  background: rgba(168, 85, 247, 0.3);
+}
+
+*:focus-visible {
+  outline: 1px solid var(--fg);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.drag-region {
+  -webkit-app-region: drag;
+  user-select: none;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
